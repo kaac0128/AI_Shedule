@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djongo',
     'rest_framework',
     'corsheaders'
 ]
@@ -84,8 +85,13 @@ WSGI_APPLICATION = 'aishedule.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'CLIENT': {
+            'host': 'localhost',
+            'port': 27017,
+            'authMechanism': 'SCRAM-SHA-1'
+        },
+        'NAME': 'AISHEDULE'
     }
 }
 
