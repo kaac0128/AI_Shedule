@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djongo',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'users',
+    'tasks',
+    'shedules'
 ]
 
 MIDDLEWARE = [
@@ -86,15 +89,15 @@ WSGI_APPLICATION = 'aishedule.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'CLIENT': {
-            'host': 'localhost',
-            'port': 27017,
-            'authMechanism': 'SCRAM-SHA-1'
-        },
         'NAME': 'AISHEDULE'
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
