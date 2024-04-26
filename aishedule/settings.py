@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'tasks',
-    'shedules'
-]
+    'shedules',
+    'auth_shedule'
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
