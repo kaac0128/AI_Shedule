@@ -1,0 +1,18 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    width: 32rem;
+}
+
+.register-content {
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+    margin: .5rem 2rem;
+}
